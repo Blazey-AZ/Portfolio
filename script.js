@@ -12,7 +12,7 @@ event.currentTarget.classList.add("active-links");
 document.getElementById(tabname).classList.add("active-tab");
 }
 
-// slider
+// Slider
 let items = document.querySelectorAll('.slider1 .item1');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -50,7 +50,7 @@ prev.onclick = function(){
     loadShow();
 }
 
-//sidemenu
+// Sidemenu
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu(){
@@ -80,7 +80,7 @@ form.addEventListener('submit', e => {
         });
 });
 
-// Scroll to top
+// Scroll To Top
 const scrollToTopButton = document.getElementById("scrollToTop");
 
 window.addEventListener("scroll", () => {
