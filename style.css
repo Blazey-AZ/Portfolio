@@ -444,7 +444,6 @@ nav .fas{
 }
 #msg{
     color: greenyellow;
-    margin-top: -10px;
     display: block;
 }
 @media only screen and (max-width: 600px){
