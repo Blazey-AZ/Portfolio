@@ -63,6 +63,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwiclfm0M2kTNEovcPZXr
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
 
+//Form Submitting
 form.addEventListener('submit', e => {
     e.preventDefault();
     msg.innerHTML = "Submitting...";
@@ -77,4 +78,22 @@ form.addEventListener('submit', e => {
         .catch(error => {
             console.error('Error!', error.message);
         });
+});
+
+// Scroll to top
+const scrollToTopButton = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+});
+
+scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });

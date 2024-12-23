@@ -473,3 +473,22 @@ nav .fas{
         cursor: pointer;
     }
 }
+#scrollToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none; /* Initially hidden */
+    background-color: #ec308e;
+    color: white;
+    border: none;
+    border-radius: 40%;
+    padding: 22px 22px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background-color: #e60073;
+}
