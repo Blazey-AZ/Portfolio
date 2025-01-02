@@ -59,26 +59,34 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px"
 }
+//Form Submitting
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwiclfm0M2kTNEovcPZXrHO0B8WcY--TC2YN6ba8LgqpF9yZTwtLhIobWJaJpVbsQVdtA/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
+  const dateInput = document.getElementById("currentDate");
 
-//Form Submitting
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    msg.innerHTML = "Submitting...";
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            msg.innerHTML = "Message sent successfully!";
-            setTimeout(() => {
-                msg.innerHTML = "";
-            }, 2000);
-            form.reset();
-        })
-        .catch(error => {
-            console.error('Error!', error.message);
-        });
-});
+  const setCurrentDate = () => {
+      const now = new Date();
+      const formattedDate = now.toLocaleString('en-US', { timeZone: 'IST' }); // Format as MM/DD/YYYY, HH:MM:SS AM/PM
+      dateInput.value = formattedDate;
+  };
+  
+  form.addEventListener('submit', e => {
+      e.preventDefault();
+      setCurrentDate(); 
+      msg.innerHTML = "Submitting...";
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => {
+              msg.innerHTML = "Message sent successfully!";
+              setTimeout(() => {
+                  msg.innerHTML = "";
+              }, 2000);
+              form.reset();
+          })
+          .catch(error => {
+              console.error('Error!', error.message);
+          });
+  });
 
 // Scroll To Top
 const scrollToTopButton = document.getElementById("scrollToTop");

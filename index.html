@@ -10,6 +10,17 @@
         <meta property="og:image" content="https://github.com/Blazey-AZ/Portfolio/blob/master/img/nakul%20s%20kumar.jpg?raw=true" />
         <meta property="og:url" content="https://nakulskumar.com/" />
         <meta property="og:type" content="website" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWPY348WDV"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MWPY348WDV');
+        </script>
+        <!-- Icon for website -->
+        
     </head>
     <body>
         <div id="header">
@@ -224,6 +235,8 @@
                             <input type="text" Name="Name" placeholder="Your Name" required>
                             <input type="email" Name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <input type="hidden" name="Date" id="currentDate">
+                            <data></data>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
                         <span id="msg"></span>
