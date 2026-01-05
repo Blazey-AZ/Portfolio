@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nakul S Kumar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/4bafd90691.js" crossorigin="anonymous"></script>
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Portfolio - Nakul S Kumar" />
+    <meta property="og:description" content="Learn about Nakul S Kumar, a Software Developer in making!" />
+    <meta property="og:image"
+        content="https://github.com/Blazey-AZ/Portfolio/blob/master/img/nakul%20s%20kumar.jpg?raw=true" />
+    <meta property="og:url" content="https://nakulskumar.com/" />
+    <meta property="og:type" content="website" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWPY348WDV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MWPY348WDV');
+    </script>
+    <!-- Icon for website -->
+    <link rel="icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/Blazey-AZ/Portfolio/refs/heads/master/img/hamu.ico">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/lion.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#knowme">Know me</a></li>
+                    <li><a href="#slider">Slider</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text" id="heroText">
+                <p class="hero-subtitle" data-text="API Developer">API Developer</p>
+                <h1 class="hero-title">
+                    <span class="hero-line1" data-text="Hi, I'm Nakul">Hi, I'm <span
+                            class="highlight">Nakul</span></span>
+                    <br>
+                    <span class="hero-line2" data-text="S Kumar from India">S Kumar from India</span>
+                </h1>
+            </div>
+            <!-- Code Symbol Container (hidden initially) -->
+            <div id="codeSymbol" class="code-symbol">
+                <div class="code-bracket left-bracket">&lt;</div>
+                <div class="code-slash">/</div>
+                <div class="code-bracket right-bracket">&gt;</div>
+            </div>
+        </div>
+    </div>
+    <!-- -------about------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="flip-container">
+                        <div class="flip-inner">
+                            <!-- Front Image -->
+                            <div class="flip-front">
+                                <img src="images/llyod.jpg" alt="Front Image">
+                            </div>
+                            <!-- Back Image -->
+                            <div class="flip-back">
+                                <img src="images/llyod2.jpg" alt="Back Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>API Developer</span><br>Backend programming</li>
+                            <li><span>Azure DevOps</span><br>Using Services from Azure</li>
+                            <li><span>Web App</span><br>Web App Development</li>
+                            <li><span>Server Management</span><br>RDBMS SQL Server Management</li>
+                            <li><span>Server Management</span><br>NoSQL SQL Server Management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-2024</span><br>Junior Software Engineer @ Idea Elan</li>
+                            <li><span>2024-2025</span><br>Software Engineer @ Idea Elan</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2023</span><br>BCA Gradutate @ Santhigiri</li>
+                            <li><span>2018-2020</span><br>St Augustines HSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------sevices------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>API Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="#">Learn More!</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Server Management</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="#">Learn More!</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gear"></i>
+                    <h2>Azure DevOps</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="#">Learn More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------portfolio------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/hamu.jpg">
+                    <div class="layer">
+                        <h3>To Be Filled</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/bidoof.jpg">
+                    <div class="layer">
+                        <h3>To Be Filled</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/llyod.jpg">
+                    <div class="layer">
+                        <h3>To Be Filled</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="link" class="btn">See More</a>
+
+        </div>
+    </div>
+    <!------- carousel ------->
+    <div id="knowme">
+        <div class="container">
+            <h1 class="sub-title">Get to know me ;)</h1>
+        </div>
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+                <div class="item" style="--position: 1"><img src="img/dragon_1.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="img/dragon_2.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="img/dragon_3.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="img/dragon_4.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="img/dragon_5.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="img/dragon_6.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="img/dragon_7.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="img/dragon_8.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="img/dragon_9.jpg" alt=""></div>
+                <div class="item" style="--position: 10"><img src="img/dragon_10.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- slider -->
+    <div id="slider">
+        <div class="container">
+            <h1 class="sub-title">Idk Slider ig</h1>
+            <div class="slider1">
+                <div class="item1">
+                    <h1>Slide 1</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <div class="item1">
+                    <h1>Slide 2</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <div class="item1">
+                    <h1>Slide 3</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <div class="item1">
+                    <h1>Slide 4</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <div class="item1">
+                    <h1>Slide 5</h1>
+                    Yo whats aupppp actualluy on yhe contratu i just wanna know wjhatsupYo whats aupppp actualluy on yhe
+                    contratu i just wanna know wjhatsupYo whats aupppp actualluy on yhe contratu i just wanna know
+                    wjhatsupYo whats aupppp actualluy on yhe contratu i just wanna know wjhatsup
+                </div>
+                <div class="item1">
+                    <h1>Slide 6</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <div class="item1">
+                    <h1>Slide 7</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae
+                    explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas
+                    laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
+                </div>
+                <button id="next">></button>
+                <button id="prev">
+                    << /button>
+            </div>
+        </div>
+    </div>
+    <!-- -------contact------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>nakulskumarwork@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 9539603647</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="img/Nakul S Kumar resume.pdf" download class="btn btn2">Download my CV!</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" Name="Name" placeholder="Your Name" required>
+                        <input type="email" Name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <input type="hidden" name="Date" id="currentDate">
+                        <data></data>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" title="Scroll To Top">▲</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
